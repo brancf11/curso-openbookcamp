@@ -1,49 +1,45 @@
-public class Main {
+package brandon;
 
+public class Main{
     public static void main(String[] args) {
-        int numeroif = 16;
+        Persona persona = new Persona();
+        persona.setNombre("Brandon Cordero");
+        persona.setEdad(19);
+        persona.setTelefono(809747035);
 
-        if (numeroif > 0) {
-            System.out.println("La variable numeroIf es:" + numeroif + " Un numero positivo");
-        } else if (numeroif < 0) {
-            System.out.println("La variable numeroIf es:" + numeroif + " Un numero negativo");
-        } else {
-            System.out.println("La variable numeroIf es: " + numeroif + " es cero");
-        }
+        System.out.println("nombre: " + persona.getNombre());
+        System.out.println("Edad: " + persona.getEdad());
+        System.out.println("Telefono: " + persona.getTelefono());
 
-        int numerowhile = 1;
-        while (numerowhile < 3) {
-            System.out.println("Nuestra variable numerowhile ahora es: " + numerowhile);
-            numerowhile = numerowhile + 1;
-        }
+    }
+} 
 
-        int numeroDowhile = 6;
-        do {
-            System.out.println("La variable numeroDowhile ahora es :" + numeroDowhile);
-            numeroDowhile = numeroDowhile + 1;
-        } while (numeroDowhile < 3);
+class Persona{
+    private String nombre;
+    private int edad;
+    private int telefono;
 
-        for (int numerofor = 0; numerofor <= 3; numerofor = numerofor + 1) {
-            System.out.println("La varible numerofor ahora es:" + numerofor);
-        }
-
-        String estacion = "primavera";
-        switch (estacion) {
-            case "otoño":
-                System.out.print("Estamos en la estacion otoño y se esta lloviendo mucho");
-                break;
-            case "primavera":
-                System.out.println("Estamos en la estacion primavera y las Flores mas hermosa estan floreciondo");
-                break;
-            case "Invierno":
-                System.out.println("Estamos en la estacion invierno y esta haciendo mucho frio");
-                break;
-            case "verano":
-                System.out.println("Estamos en la estacion verano y ya llegaron las vacaciones");
-                break;
-            default:
-                System.out.println("Esta no es una estacion");
-        }
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    } 
+    
+    public String getNombre(){
+        return nombre;
     }
 
+    public void setEdad(int edad){
+        this.edad = edad;
+    } 
+    
+    public int getEdad(){
+        return edad;
+    }
+    public void setTelefono(int telefono){
+        this.telefono = telefono;
+    } 
+    
+    public int getTelefono(){
+        return telefono;
+    }
 }
+
